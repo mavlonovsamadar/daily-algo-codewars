@@ -267,16 +267,31 @@
 // console.log(friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]));
 // console.log(friend(["Love", "Your", "Face", "1"]));
 
-function getMiddle(s) {
-    return s.length % 2 === 1 ? s.charAt(s.length / 2) : s.charAt(s.length / 2 - 1) + s.charAt(s.length / 2 - 1 + 1)
-}
-console.log(getMiddle(['Alex', 'Jacob', 'Mark', 'Max']));
+// function getMiddle(s) {
+//     return s.length % 2 === 1 ? s.charAt(s.length / 2) : s.charAt(s.length / 2 - 1) + s.charAt(s.length / 2 - 1 + 1)
+// }
+// console.log(getMiddle(['Alex', 'Jacob', 'Mark', 'Max']));
 // console.log(getMiddle("testing"));
 // console.log(getMiddle("middle"));
 // console.log(getMiddle("A"));
 
-
-
+function highAndLow(numbers){
+  let arr =numbers.split(' ').map(Number);
+  let max = arr[0],min =arr[0];
+  for(let i = 0;i<arr.length;i++){
+    if(arr[i] > max){
+      max = arr[i];
+    }
+    if(arr[i] < min){
+      min = arr[i]
+    }
+  }
+  let result = max + ' ' + min;
+  return result;
+}
+ console.log(highAndLow("1 2 -3 4 5"));
+ console.log(highAndLow("1 2 -3 4 5"));
+ console.log(highAndLow("1 9 3 4 -5"));
 
 
 
